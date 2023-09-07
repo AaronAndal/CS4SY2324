@@ -27,7 +27,7 @@ public class CS4CharmAndal {
         String ratingComparison2;
         
         String name3 = "BBQ Pringles";
-        int rating3 = rating1 + rating2;
+        int rating3 = 10;
         int caloriesPerServing3 = 150;
         String ratingComparison3;
 
@@ -64,9 +64,18 @@ public class CS4CharmAndal {
         System.out.println();
         
         System.out.println("Flavor #3: " + name3);
-        System.out.println( "    " + "Flavor Rating (Out of 10): " + rating3 + "// (Operation: sum)");
+        System.out.println( "    " + "Flavor Rating (Out of 10): " + rating3);
         System.out.println( "    " + "Calories (per Serving): " + caloriesPerServing3);
         System.out.println( "    " + "Is the rating higher than the mean rating" + '(' + meanRating + ")?: " + ratingComparison3);
+        System.out.println();
+        
+        System.out.println("Mean Rating: " + meanRating);
+        if ((rating1 == rating2) && (rating2 == rating3)) {
+            System.out.println("All ratings are equal: True");
+        }
+        else {
+            System.out.println("All ratings are equal: False");
+        }
     }
     
 }
