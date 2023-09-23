@@ -30,14 +30,20 @@ public class CS4Exercise4Andal {
         
         while (running) {
             
-        int playerWins = 0, computerWins = 0;
+        int playerWins = 0, computerWins = 0, choice, moveChoice;
             
         System.out.println("\nWelcome to Rock, Paper, Scissors. Please choose an option:");
         System.out.println("1. Start Game");
         System.out.println("2. Change Number of Rounds");
         System.out.println("3. Exit Application");
         
-        int choice = scan.nextInt();
+                try {
+                choice = Integer.parseInt(scan.next());
+                }
+                catch (NumberFormatException ex) {
+                    System.out.println("Input is not an integer!");
+                    break;
+                }
         
         switch (choice) {
             case 1:
@@ -52,7 +58,13 @@ public class CS4Exercise4Andal {
                 System.out.println("2. Paper");
                 System.out.println("3. Scissors");
                 
-                int moveChoice = scan.nextInt();
+                try {
+                    moveChoice = Integer.parseInt(scan.next());;
+                }
+                catch (NumberFormatException ex) {
+                    System.out.println("Input is not an integer!");
+                    break;
+                }
                 
                 switch (moveChoice) {
                     
@@ -126,9 +138,15 @@ public class CS4Exercise4Andal {
             case 2:
                 System.out.println("You chose to change number of rounds!");
                 System.out.println("How many wins does a player need to win?");
-                roundsToWin = scan.nextInt();
+                try {
+                roundsToWin = Integer.parseInt(scan.next());
                 System.out.printf("\nYou now need to win %d rounds to win the game!\n", roundsToWin);
                 break;
+                }
+                catch (NumberFormatException ex) {
+                    System.out.println("Input is not an integer!");
+                    break;
+                }
                 
             case 3:
                 
